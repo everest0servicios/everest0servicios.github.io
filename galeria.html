@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galería — EVEREST</title>
+  <meta name="description" content="Trabajos y ejemplos de EVEREST." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: '#0f4c81' } } } };
+  </script>
+  <style>body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}</style>
+</head>
+<body class="bg-white text-gray-800">
+  <header class="border-b">
+    <div class="mx-auto max-w-6xl h-16 flex items-center justify-between px-4">
+      <a href="/" class="font-extrabold tracking-widest">EVEREST</a>
+      <a href="/" class="text-sm hover:text-brand">Volver al inicio</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-10">
+    <h1 class="text-3xl font-bold">Galería de trabajos</h1>
+    <p class="mt-2 text-gray-600">Ejemplos reales de instalaciones y mantenimientos.</p>
+
+    <!-- GRID DE IMÁGENES -->
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Cambiá los src por tus archivos en assets/img/ -->
+      <figure class="rounded-2xl overflow-hidden border bg-white shadow-sm">
+        <img src="assets/img/trabajo-1.jpg" alt="Instalación 3000 fg" class="h-56 w-full object-cover" />
+        <figcaption class="p-3 text-sm">Instalación 3000 fg — Dormitorio</figcaption>
+      </figure>
+
+      <figure class="rounded-2xl overflow-hidden border bg-white shadow-sm">
+        <img src="assets/img/trabajo-2.jpg" alt="Mantenimiento" class="h-56 w-full object-cover" />
+        <figcaption class="p-3 text-sm">Mantenimiento full</figcaption>
+      </figure>
+
+      <figure class="rounded-2xl overflow-hidden border bg-white shadow-sm">
+        <img src="assets/img/trabajo-3.jpg" alt="Circuito dedicado" class="h-56 w-full object-cover" />
+        <figcaption class="p-3 text-sm">Circuito dedicado</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer class="border-t mt-12">
+    <div class="mx-auto max-w-6xl px-4 py-6 text-sm text-gray-600 flex flex-wrap gap-4 justify-between">
+      <span>© <span id="year"></span> EVEREST</span>
+      <nav class="space-x-4">
+        <a class="hover:underline" href="/">Inicio</a>
+        <a class="hover:underline" href="mailto:everestservicios0@gmail.com">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
