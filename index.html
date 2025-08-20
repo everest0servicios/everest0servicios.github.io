@@ -10,6 +10,7 @@
     tailwind.config = { theme: { extend: { colors: { brand: '#0f4c81' } } } };
   </script>
   <style>body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}</style>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-white text-gray-800">
   <!-- ====== HEADER ====== -->
@@ -150,9 +151,24 @@
             <li><a class="hover:underline" href="mailto:everestservicios0@gmail.com">everestservicios0@gmail.com</a></li>
             <li>Zona Sur GBA</li>
           </ul>
-          <div class="mt-4 flex gap-4 text-sm">
-            <a class="hover:text-brand" target="_blank" href="https://www.facebook.com/profile.php?id=61579274276568&locale=es_LA">Facebook</a>
-            <a class="hover:text-brand" target="_blank" href="https://www.instagram.com/everest.r10/?hl=es">Instagram</a>
+          <!-- Redes sociales con íconos -->
+          <div class="mt-4 flex items-center gap-4 text-gray-600">
+            <!-- Facebook -->
+            <a class="hover:text-brand" target="_blank" href="https://www.facebook.com/profile.php?id=61579274276568&locale=es_LA" aria-label="Facebook">
+              <svg role="img" viewBox="0 0 24 24" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.795.142v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.587l-.467 3.622h-3.12V24H22.68c.73 0 1.32-.593 1.32-1.324V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+            </a>
+            <!-- Instagram -->
+            <a class="hover:text-brand" target="_blank" href="https://www.instagram.com/everest.r10/?hl=es" aria-label="Instagram">
+              <svg role="img" viewBox="0 0 24 24" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.2.057 1.937.25 2.385.417.6.236 1.03.52 1.48.97.45.45.734.88.97 1.48.167.448.36 1.185.417 2.385.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.057 1.2-.25 1.937-.417 2.385-.236.6-.52 1.03-.97 1.48-.45.45-.88.734-1.48.97-.448.167-1.185.36-2.385.417-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.2-.057-1.937-.25-2.385-.417-.6-.236-1.03-.52-1.48-.97-.45-.45-.734-.88-.97-1.48-.167-.448-.36-1.185-.417-2.385C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.057-1.2.25-1.937.417-2.385.236-.6.52-1.03.97-1.48.45-.45.88-.734 1.48-.97.448-.167 1.185-.36 2.385-.417C8.417 2.175 8.797 2.163 12 2.163zm0 3.675a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm7.2-1.62a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+            </a>
+            <!-- TikTok -->
+            <a class="hover:text-brand" target="_blank" href="https://www.tiktok.com/@everest.r10?_t=ZM-8z2bVZozxsW&_r=1" aria-label="TikTok">
+              <svg role="img" viewBox="0 0 24 24" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M12.525 0h3.223a6.933 6.933 0 0 0 1.32 3.566 6.92 6.92 0 0 0 3.61 2.61v3.3a10.19 10.19 0 0 1-3.947-.804 10.36 10.36 0 0 1-1.992-1.16v6.77a6.935 6.935 0 1 1-6.934-6.934c.2 0 .398.01.593.028v3.38a3.56 3.56 0 1 0 2.54 3.4L12.537 0h-.012z"/></svg>
+            </a>
+            <!-- WhatsApp -->
+            <a class="hover:text-brand" target="_blank" href="https://wa.me/5491125322825?text=Hola%2C%20vengo%20desde%20la%20web.%20Quisiera%20un%20presupuesto%20para%20instalaci%C3%B3n%20%2F%20mantenimiento." aria-label="WhatsApp">
+              <svg role="img" viewBox="0 0 24 24" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.718 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.36-.214-3.741.983.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.886 9.884M20.52 3.478A11.815 11.815 0 0 0 12.04 0C5.495 0 .338 5.159.334 11.704c0 2.063.541 4.084 1.57 5.865L0 24l6.614-1.732a11.657 11.657 0 0 0 5.418 1.38h.005c6.545 0 11.703-5.159 11.707-11.704A11.63 11.63 0 0 0 20.52 3.478"/></svg>
+            </a>
           </div>
         </div>
         <div>
@@ -185,6 +201,7 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    lucide.createIcons();
   </script>
 </body>
 </html>
