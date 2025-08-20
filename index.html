@@ -118,6 +118,46 @@
     </div>
   </section>
 
+  <!-- ====== CERTIFICADO ====== -->
+  <section id="certificado" class="mt-12 text-center">
+    <h3 class="text-xl font-semibold">Certificado de garantía</h3>
+    <p class="mt-2 text-sm text-gray-600">Toque para ampliar.</p>
+    <button id="openCert" class="group mt-4 inline-block focus:outline-none" aria-label="Abrir certificado en grande">
+      <img src="Certificados.png" alt="Certificado de garantía EVEREST" class="mx-auto max-h-96 rounded-lg shadow transition-transform duration-200 group-hover:scale-[1.02]" />
+    </button>
+  </section>
+  <div id="certModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-4" aria-hidden="true">
+    <div id="certPanel" class="transform-gpu scale-95 opacity-0 transition-all duration-200 ease-out">
+      <img src="Certificados.png" alt="Certificado de garantía EVEREST en grande" class="max-h-[88vh] w-auto rounded-xl shadow-2xl" />
+    </div>
+  </div>
+  <script>
+    (function(){
+      const openBtn=document.getElementById('openCert');
+      const modal=document.getElementById('certModal');
+      const panel=document.getElementById('certPanel');
+      function openModal(){
+        modal.classList.remove('hidden');
+        modal.setAttribute('aria-hidden','false');
+        requestAnimationFrame(()=>{
+          panel.classList.remove('scale-95','opacity-0');
+          panel.classList.add('scale-100','opacity-100');
+        });
+      }
+      function closeModal(){
+        panel.classList.add('scale-95','opacity-0');
+        panel.classList.remove('scale-100','opacity-100');
+        setTimeout(()=>{
+          modal.classList.add('hidden');
+          modal.setAttribute('aria-hidden','true');
+        },180);
+      }
+      openBtn.addEventListener('click',openModal);
+      modal.addEventListener('click',e=>{if(e.target===modal||e.target.tagName==='IMG')closeModal();});
+      document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.classList.contains('hidden'))closeModal();});
+    })();
+  </script>
+
   <!-- ====== CTA CONTACTO ====== -->
   <section id="contacto" class="py-14">
     <div class="mx-auto max-w-6xl rounded-3xl bg-gradient-to-tr from-blue-50 to-white px-6 py-10 shadow-sm">
@@ -159,8 +199,4 @@
             </a>
             <!-- Instagram -->
             <a class="hover:text-brand" target="_blank" href="https://www.instagram.com/everest.r10/?hl=es" aria-label="Instagram">
-              <svg role="img" viewBox="0 0 24 24" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.2.057 1.937.25 2.385.417.6.236 1.03.52 1.48.97.45.45.734.88.97 1.48.167.448.36 1.185.417 2.385.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.057 1.2-.25 1.937-.417 2.385-.236.6-.52 1.03-.97 1.48-.45.45-.88.734-1.48.97-.448.167-1.185.36-2.385.417-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.2-.057-1.937-.25-2.385-.417-.6-.236-1.03-.52-1.48-.97-.45-.45-.734-.88-.97-1.48-.167-.448-.36-1.185-.417-2.385C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.057-1.2.25-1.937.417-2.385.236-.6.52-1.03.97-1.48.45-.45.88-.734 1.48-.97.448-.167 1.185-.36 2.385-.417C8.417 2.175 8.797 2.163 12 2.163zm0 3.675a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm7.2-1.62a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
-            </a>
-            <!-- TikTok -->
-            <a class="hover:text-brand" target="_blank" href="https://www.tiktok.com/@everest.r10?_t=ZM-8z2bVZozxsW&_r=1" aria-label="TikTok">
-              <svg role="img" viewBox="0 0 24 24" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M12.525 0h3.223a6.933 6.933 0 0 0 1.32 3.566 6.92 6
+              <svg role="img" viewBox="0 0 24 24" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.2.057 1.937.25 2.385.417.6.236 1.03.52 1.48.97.45.45.734.88.97 1.48.167.448.36 1.185.417
