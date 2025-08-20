@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EVEREST — Climatización y Electricidad</title>
-  <meta name="description" content="Instalación y mantenimiento de aire acondicionado. Instalaciones eléctricas seguras. Zona Sur CABA." />
+  <meta name="description" content="Instalación y mantenimiento de aire acondicionado. Instalaciones eléctricas seguras. Zona Sur GBA." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = { theme: { extend: { colors: { brand: '#0f4c81' } } } };
@@ -16,7 +16,7 @@
   <header class="sticky top-0 z-40 border-b bg-white/80 backdrop-blur">
     <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
       <a href="#" class="flex items-center gap-2">
-        <img src="logo.png" alt="Logo EVEREST" class="h-8 w-8 object-contain" />
+        <img src="assets/img/logo.png" alt="Logo EVEREST" class="h-8 w-8 object-contain" />
         <span class="font-extrabold tracking-widest">EVEREST</span>
       </a>
       <nav class="hidden gap-6 md:flex text-sm font-medium">
@@ -47,10 +47,12 @@
              href="https://wa.me/5491125322825?text=Hola%2C%20vengo%20desde%20la%20web.%20Quisiera%20un%20presupuesto%20para%20instalaci%C3%B3n%20%2F%20mantenimiento.">Contactar por WhatsApp</a>
           <a href="#servicios" class="rounded-2xl border px-5 py-3 text-sm font-semibold hover:bg-gray-50">Ver servicios</a>
         </div>
-        <div class="mt-3 text-xs text-gray-500">Atención Lun-Sab 8–20h · Factura y garantía escrita</div>
+        <div class="mt-3 text-xs text-gray-500">Atención Lun–Sab 8–20 h · Factura y garantía escrita</div>
       </div>
       <div>
-        <img src="https://images.unsplash.com/photo-1598300183725-c9a28d88e55a?q=80&w=1200&auto=format&fit=crop" alt="Técnico instalando aire" class="h-[360px] w-full rounded-2xl object-cover shadow-xl" />
+        <button class="zoomable group relative inline-block focus:outline-none" data-img="assets/img/tecnico-instalando-aire.jpg">
+          <img src="assets/img/tecnico-instalando-aire.jpg" alt="Técnico instalando aire" class="h-[360px] w-full rounded-2xl object-cover shadow-xl transition-transform duration-200 group-hover:scale-[1.02]" />
+        </button>
       </div>
     </div>
   </section>
@@ -66,7 +68,7 @@
           <p class="mt-3 text-sm text-gray-600">Montaje prolijo de minisplits hasta 6000 frigorías. Inverter y on/off.</p>
         </div>
         <div class="rounded-2xl border bg-white p-6 shadow-sm">
-          <div class="flex items-center gap-3 text-lg font-semibold"><span class="text-2xl">🧰</span> Mantenimiento y Reparación de Equipos</div>
+          <div class="flex items-center gap-3 text-lg font-semibold"><span class="text-2xl">🧰</span> Mantenimiento de Equipos</div>
           <p class="mt-3 text-sm text-gray-600">Limpieza integral, vacío, control de rendimiento y consumo.</p>
         </div>
         <div class="rounded-2xl border bg-white p-6 shadow-sm">
@@ -90,7 +92,9 @@
         </ul>
       </div>
       <div>
-        <img src="Certificados.png""https://images.unsplash.com/photo-1603715749720-901ac53c3e56?q=80&w=1200&auto=format&fit=crop" alt="Trabajo prolijo" class="h-[360px] w-full rounded-2xl object-cover shadow-xl" />
+        <button class="zoomable group relative inline-block focus:outline-none" data-img="assets/img/trabajo-prolijo.jpg">
+          <img src="assets/img/trabajo-prolijo.jpg" alt="Trabajo prolijo" class="h-[360px] w-full rounded-2xl object-cover shadow-xl transition-transform duration-200 group-hover:scale-[1.02]" />
+        </button>
       </div>
     </div>
   </section>
@@ -102,15 +106,21 @@
       <p class="mx-auto mt-2 max-w-2xl text-center text-gray-600">Algunos trabajos recientes.</p>
       <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
         <figure class="overflow-hidden rounded-2xl border bg-white shadow-sm">
-          <img src="https://images.unsplash.com/photo-1603715749720-901ac53c3e56?q=80&w=1200&auto=format&fit=crop" alt="Instalación 3000 fg" class="h-48 w-full object-cover" />
+          <button class="zoomable group relative inline-block focus:outline-none w-full" data-img="assets/img/instalacion-3000.jpg">
+            <img src="assets/img/instalacion-3000.jpg" alt="Instalación 3000 fg" class="h-48 w-full object-cover transition-transform duration-200 group-hover:scale-[1.02]" />
+          </button>
           <figcaption class="p-4 text-base font-semibold">Instalación 3000 fg – Dormitorio</figcaption>
         </figure>
         <figure class="overflow-hidden rounded-2xl border bg-white shadow-sm">
-          <img src="https://images.unsplash.com/photo-1598300183690-5b7b29f2c1b1?q=80&w=1200&auto=format&fit=crop" alt="Mantenimiento en living" class="h-48 w-full object-cover" />
+          <button class="zoomable group relative inline-block focus:outline-none w-full" data-img="assets/img/mantenimiento-living.jpg">
+            <img src="assets/img/mantenimiento-living.jpg" alt="Mantenimiento en living" class="h-48 w-full object-cover transition-transform duration-200 group-hover:scale-[1.02]" />
+          </button>
           <figcaption class="p-4 text-base font-semibold">Mantenimiento full – Living</figcaption>
         </figure>
         <figure class="overflow-hidden rounded-2xl border bg-white shadow-sm">
-          <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop" alt="Circuito dedicado" class="h-48 w-full object-cover" />
+          <button class="zoomable group relative inline-block focus:outline-none w-full" data-img="assets/img/circuito-dedicado.jpg">
+            <img src="assets/img/circuito-dedicado.jpg" alt="Circuito dedicado" class="h-48 w-full object-cover transition-transform duration-200 group-hover:scale-[1.02]" />
+          </button>
           <figcaption class="p-4 text-base font-semibold">Circuito dedicado + térmica</figcaption>
         </figure>
       </div>
@@ -121,29 +131,35 @@
   <section id="certificado" class="mt-12 text-center">
     <h3 class="text-xl font-semibold">Certificado de garantía</h3>
     <p class="mt-2 text-sm text-gray-600">Toque para ampliar.</p>
-    <button id="openCert" class="group mt-4 inline-block focus:outline-none" aria-label="Abrir certificado en grande">
+    <button class="zoomable group mt-4 inline-block focus:outline-none" aria-label="Abrir certificado en grande" data-img="Certificados.png">
       <img src="Certificados.png" alt="Certificado de garantía EVEREST" class="mx-auto max-h-96 rounded-lg shadow transition-transform duration-200 group-hover:scale-[1.02]" />
     </button>
   </section>
-  <div id="certModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-4" aria-hidden="true">
-    <div id="certPanel" class="transform-gpu scale-95 opacity-0 transition-all duration-200 ease-out">
-      <img src="Certificados.png" alt="Certificado de garantía EVEREST en grande" class="max-h-[90vh] max-w-[90vw] rounded-xl shadow-2xl object-contain" />
+
+  <!-- ====== MODAL ZOOM ====== -->
+  <div id="zoomModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-4" aria-hidden="true">
+    <div id="zoomPanel" class="transform-gpu scale-95 opacity-0 transition-all duration-200 ease-out">
+      <img id="zoomImg" src="" alt="Imagen ampliada" class="max-h-[90vh] max-w-[90vw] rounded-xl shadow-2xl object-contain" />
     </div>
   </div>
   <script>
     (function(){
-      const openBtn=document.getElementById('openCert');
-      const modal=document.getElementById('certModal');
-      const panel=document.getElementById('certPanel');
-      function openModal(){
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        modal.setAttribute('aria-hidden','false');
-        requestAnimationFrame(()=>{
-          panel.classList.remove('scale-95','opacity-0');
-          panel.classList.add('scale-100','opacity-100');
+      const modal=document.getElementById('zoomModal');
+      const panel=document.getElementById('zoomPanel');
+      const zoomImg=document.getElementById('zoomImg');
+      document.querySelectorAll('.zoomable').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          const src=btn.getAttribute('data-img');
+          zoomImg.src=src;
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          modal.setAttribute('aria-hidden','false');
+          requestAnimationFrame(()=>{
+            panel.classList.remove('scale-95','opacity-0');
+            panel.classList.add('scale-100','opacity-100');
+          });
         });
-      }
+      });
       function closeModal(){
         panel.classList.add('scale-95','opacity-0');
         panel.classList.remove('scale-100','opacity-100');
@@ -151,9 +167,9 @@
           modal.classList.remove('flex');
           modal.classList.add('hidden');
           modal.setAttribute('aria-hidden','true');
+          zoomImg.src='';
         },180);
       }
-      openBtn.addEventListener('click',openModal);
       modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
       document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.classList.contains('hidden'))closeModal();});
     })();
@@ -180,7 +196,7 @@
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
         <div>
           <div class="flex items-center gap-2">
-            <img src="logo.png" alt="Logo EVEREST" class="h-8 w-8 object-contain" />
+            <img src="assets/img/logo.png" alt="Logo EVEREST" class="h-8 w-8 object-contain" />
             <span class="font-extrabold tracking-widest">EVEREST</span>
           </div>
           <p class="mt-2 text-sm text-gray-600">Tu confort en buenas manos</p>
@@ -190,7 +206,7 @@
           <ul class="mt-3 space-y-2 text-sm text-gray-600">
             <li><a class="hover:underline" target="_blank" rel="noreferrer" href="https://wa.me/5491125322825?text=Hola%2C%20vengo%20desde%20la%20web.%20Quisiera%20un%20presupuesto%20para%20instalaci%C3%B3n%20%2F%20mantenimiento.">WhatsApp</a></li>
             <li><a class="hover:underline" href="mailto:everestservicios0@gmail.com">everestservicios0@gmail.com</a></li>
-            <li>Zona Sur GBA y CABA</li>
+            <li>Zona Sur GBA</li>
           </ul>
           <div class="mt-4 space-y-1 text-sm text-gray-600">
             <div><a class="hover:underline" target="_blank" href="https://www.facebook.com/profile.php?id=61579274276568&locale=es_LA">Facebook</a></div>
