@@ -10,7 +10,6 @@
     tailwind.config = { theme: { extend: { colors: { brand: '#0f4c81' } } } };
   </script>
   <style>body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}</style>
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-white text-gray-800">
   <!-- ====== HEADER ====== -->
@@ -128,7 +127,7 @@
   </section>
   <div id="certModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-4" aria-hidden="true">
     <div id="certPanel" class="transform-gpu scale-95 opacity-0 transition-all duration-200 ease-out">
-      <img src="Certificados.png" alt="Certificado de garantía EVEREST en grande" class="max-h-[88vh] w-auto rounded-xl shadow-2xl" />
+      <img src="Certificados.png" alt="Certificado de garantía EVEREST en grande" class="max-h-[90vh] max-w-[90vw] rounded-xl shadow-2xl object-contain" />
     </div>
   </div>
   <script>
@@ -138,6 +137,7 @@
       const panel=document.getElementById('certPanel');
       function openModal(){
         modal.classList.remove('hidden');
+        modal.classList.add('flex');
         modal.setAttribute('aria-hidden','false');
         requestAnimationFrame(()=>{
           panel.classList.remove('scale-95','opacity-0');
@@ -148,12 +148,13 @@
         panel.classList.add('scale-95','opacity-0');
         panel.classList.remove('scale-100','opacity-100');
         setTimeout(()=>{
+          modal.classList.remove('flex');
           modal.classList.add('hidden');
           modal.setAttribute('aria-hidden','true');
         },180);
       }
       openBtn.addEventListener('click',openModal);
-      modal.addEventListener('click',e=>{if(e.target===modal||e.target.tagName==='IMG')closeModal();});
+      modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
       document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.classList.contains('hidden'))closeModal();});
     })();
   </script>
@@ -191,12 +192,14 @@
             <li><a class="hover:underline" href="mailto:everestservicios0@gmail.com">everestservicios0@gmail.com</a></li>
             <li>Zona Sur GBA</li>
           </ul>
-          <!-- Redes sociales con íconos -->
-          <div class="mt-4 flex items-center gap-4 text-gray-600">
-            <!-- Facebook -->
-            <a class="hover:text-brand" target="_blank" href="https://www.facebook.com/profile.php?id=61579274276568&locale=es_LA" aria-label="Facebook">
-              <svg role="img" viewBox="0 0 24 24" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.795.142v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.587l-.467 3.622h-3.12V24H22.68c.73 0 1.32-.593 1.32-1.324V1.325C24 .593 23.407 0 22.675 0z"/></svg>
-            </a>
-            <!-- Instagram -->
-            <a class="hover:text-brand" target="_blank" href="https://www.instagram.com/everest.r10/?hl=es" aria-label="Instagram">
-              <svg role="img" viewBox="0 0 24 24" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.2.057 1.937.25 2.385.417.6.236 1.03.52 1.48.97.45.45.734.88.97 1.48.167.448.36 1.185.417
+          <div class="mt-4 space-y-1 text-sm text-gray-600">
+            <div><a class="hover:underline" target="_blank" href="https://www.facebook.com/profile.php?id=61579274276568&locale=es_LA">Facebook</a></div>
+            <div><a class="hover:underline" target="_blank" href="https://www.instagram.com/everest.r10/?hl=es">Instagram</a></div>
+            <div><a class="hover:underline" target="_blank" href="https://www.tiktok.com/@everestclima">TikTok</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
