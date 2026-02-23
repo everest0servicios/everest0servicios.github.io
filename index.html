@@ -9,40 +9,48 @@
   <script>
     tailwind.config = { theme: { extend: { colors: { brand: '#0f4c81' } } } };
   </script>
-  <style>body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}</style>
+  <style>
+    body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}
+  </style>
 </head>
+
 <body class="bg-white text-gray-800">
 
+<!-- ===== HEADER ===== -->
 <header class="sticky top-0 z-40 border-b bg-white/80 backdrop-blur">
   <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
     <a href="#" class="flex items-center gap-2">
-      <img src="assets/img/logo.png" alt="Logo EVEREST" class="h-16 w-auto object-contain" />
+      <img src="assets/img/logo.png" alt="Logo EVEREST" class="h-14 w-auto object-contain" />
       <span class="font-extrabold tracking-widest">EVEREST</span>
     </a>
+
     <nav class="hidden gap-6 md:flex text-sm font-medium">
       <a href="#servicios" class="hover:text-brand">Servicios</a>
-      <a href="#por-que" class="hover:text-brand">Por qué</a>
+      <a href="#proceso" class="hover:text-brand">Proceso</a>
       <a href="#trabajos" class="hover:text-brand">Trabajos</a>
       <a href="#contacto" class="hover:text-brand">Contacto</a>
     </nav>
+
     <a class="rounded-2xl bg-brand px-4 py-2 text-sm font-semibold text-white hover:brightness-110"
        target="_blank"
        href="https://wa.me/5491125322825?text=Hola,%20quisiera%20coordinar%20una%20evaluación%20técnica.">
-      Solicitar evaluación
+       Solicitar evaluación
     </a>
   </div>
 </header>
 
-<!-- HERO -->
+
+<!-- ===== HERO ===== -->
 <section class="relative">
   <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-16 md:grid-cols-2">
+
     <div>
       <h1 class="text-4xl font-extrabold leading-tight md:text-5xl">
         Instalación profesional de <span class="text-brand">climatización</span> y <span class="text-brand">electricidad</span> para obras y proyectos residenciales
       </h1>
 
       <p class="mt-5 text-gray-600">
-        Especialistas en sistemas <strong>split y piso techo</strong>, circuitos dedicados y protecciones reglamentarias.
+        Especialista en sistemas <strong>split y piso techo</strong>, circuitos dedicados y protecciones reglamentarias.
         Trabajo técnico con procedimiento completo, garantía escrita y facturación formal.
         Servicio en <strong>Zona Sur y CABA</strong>.
       </p>
@@ -51,10 +59,12 @@
         <a class="rounded-2xl bg-brand px-5 py-3 text-sm font-semibold text-white hover:brightness-110"
            target="_blank"
            href="https://wa.me/5491125322825?text=Hola,%20quisiera%20coordinar%20una%20evaluación%20técnica.">
-          Coordinar evaluación técnica
+           Coordinar evaluación técnica
         </a>
-        <a href="#servicios" class="rounded-2xl border px-5 py-3 text-sm font-semibold hover:bg-gray-50">
-          Ver servicios
+
+        <a href="#servicios"
+           class="rounded-2xl border px-5 py-3 text-sm font-semibold hover:bg-gray-50">
+           Ver servicios
         </a>
       </div>
 
@@ -68,15 +78,18 @@
            alt="Instalación profesional en obra"
            class="aspect-[4/3] w-full rounded-2xl object-cover shadow-xl" />
     </div>
+
   </div>
 </section>
 
-<!-- SERVICIOS -->
+
+<!-- ===== SERVICIOS ===== -->
 <section id="servicios" class="bg-gray-50 py-16">
   <div class="mx-auto max-w-6xl px-4">
     <h2 class="text-center text-3xl font-bold">Servicios</h2>
+
     <p class="mx-auto mt-2 max-w-2xl text-center text-gray-600">
-      Instalaciones técnicas prolijas, con herramientas profesionales y control de funcionamiento.
+      Instalaciones técnicas prolijas con herramientas profesionales y control de funcionamiento.
     </p>
 
     <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -84,14 +97,16 @@
       <div class="rounded-2xl border bg-white p-6 shadow-sm">
         <div class="text-lg font-semibold">Climatización</div>
         <p class="mt-3 text-sm text-gray-600">
-          Instalación de sistemas split y piso techo. Vacío reglamentario, prueba de estanqueidad y puesta en marcha controlada.
+          Instalación de sistemas split y piso techo.
+          Vacío reglamentario, prueba de estanqueidad y puesta en marcha controlada.
         </p>
       </div>
 
       <div class="rounded-2xl border bg-white p-6 shadow-sm">
         <div class="text-lg font-semibold">Mantenimiento técnico</div>
         <p class="mt-3 text-sm text-gray-600">
-          Limpieza profunda, control eléctrico, medición de consumo y verificación de rendimiento del equipo.
+          Limpieza profunda, control eléctrico, medición de consumo
+          y verificación de rendimiento del equipo.
         </p>
       </div>
 
@@ -106,17 +121,125 @@
   </div>
 </section>
 
-<!-- POR QUÉ -->
-<section id="por-que" class="py-16">
-  <div class="mx-auto max-w-6xl px-4">
-    <h2 class="text-3xl font-bold">¿Por qué elegir EVEREST?</h2>
 
-    <ul class="mt-8 space-y-4 text-gray-700 max-w-3xl">
-      <li>✔ Procedimiento técnico completo en cada instalación</li>
-      <li>✔ Garantía escrita con certificado entregado al cliente</li>
-      <li>✔ Facturación formal (Factura C)</li>
-      <li>✔ Herramientas profesionales y trabajo prolijo en obra</li>
-      <li>✔ Comunicación directa con el técnico responsable</li>
-    </ul>
+<!-- ===== PROCESO ===== -->
+<section id="proceso" class="py-16">
+  <div class="mx-auto max-w-6xl px-4">
+    <h2 class="text-3xl font-bold text-center">Procedimiento de trabajo</h2>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+
+      <div class="rounded-2xl border p-6">
+        <h3 class="font-semibold">1. Evaluación técnica</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Análisis del espacio, ubicación de unidades y requerimientos eléctricos antes de iniciar la instalación.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border p-6">
+        <h3 class="font-semibold">2. Instalación profesional</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Montaje prolijo, vacío reglamentario, prueba de estanqueidad y verificación de funcionamiento.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border p-6">
+        <h3 class="font-semibold">3. Control eléctrico</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Instalación de circuito dedicado y protecciones según normativa.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border p-6">
+        <h3 class="font-semibold">4. Entrega y documentación</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Certificado de garantía y facturación formal entregados al finalizar el trabajo.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
+
+
+<!-- ===== TRABAJOS ===== -->
+<section id="trabajos" class="bg-gray-50 py-16">
+  <div class="mx-auto max-w-6xl px-4">
+    <h2 class="text-center text-3xl font-bold">Trabajos realizados</h2>
+
+    <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+
+      <figure class="overflow-hidden rounded-2xl border bg-white shadow-sm">
+        <img src="assets/img/instalacion-3000.jpg" class="h-48 w-full object-cover">
+        <figcaption class="p-4 font-semibold">Instalación split – Dormitorio</figcaption>
+      </figure>
+
+      <figure class="overflow-hidden rounded-2xl border bg-white shadow-sm">
+        <img src="assets/img/mantenimiento-living.jpg" class="h-48 w-full object-cover">
+        <figcaption class="p-4 font-semibold">Mantenimiento técnico – Living</figcaption>
+      </figure>
+
+      <figure class="overflow-hidden rounded-2xl border bg-white shadow-sm">
+        <img src="assets/img/circuito-dedicado.jpg" class="h-48 w-full object-cover">
+        <figcaption class="p-4 font-semibold">Circuito dedicado + protecciones</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== CERTIFICADO (SE MANTIENE) ===== -->
+<section id="certificado" class="mt-16 text-center">
+  <h3 class="text-xl font-semibold">Certificado de garantía</h3>
+  <p class="mt-2 text-sm text-gray-600">Documento entregado en cada instalación.</p>
+
+  <img src="Certificados.png"
+       alt="Certificado de garantía EVEREST"
+       class="mx-auto mt-6 max-h-96 rounded-lg shadow">
+</section>
+
+
+<!-- ===== CTA FINAL ===== -->
+<section id="contacto" class="py-16">
+  <div class="mx-auto max-w-6xl rounded-3xl bg-gradient-to-tr from-blue-50 to-white px-6 py-12 shadow-sm text-center">
+    <h3 class="text-2xl font-bold">
+      ¿Necesitás un instalador técnico confiable para tu proyecto?
+    </h3>
+
+    <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
+      Coordinemos una evaluación técnica y definimos la mejor solución para tu obra o proyecto residencial.
+    </p>
+
+    <div class="mt-6">
+      <a class="rounded-2xl bg-brand px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
+         target="_blank"
+         href="https://wa.me/5491125322825?text=Hola,%20quisiera%20coordinar%20una%20evaluación%20técnica.">
+         Coordinar evaluación
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="border-t py-10">
+  <div class="mx-auto max-w-6xl px-4 text-sm text-gray-600">
+    <div class="flex flex-col md:flex-row justify-between gap-6">
+      <div>
+        <strong>EVEREST</strong><br>
+        Climatización y Electricidad<br>
+        Zona Sur y CABA
+      </div>
+
+      <div>
+        WhatsApp: 11 2532 2825<br>
+        Email: everestservicios0@gmail.com<br>
+        Monotributista – Factura C
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
