@@ -3,18 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EVEREST — Climatización y Electricidad</title>
-  <meta name="description" content="Instalación profesional de sistemas split y piso techo. Instalaciones eléctricas técnicas con garantía escrita. Zona Sur y CABA." />
+
+  <title>EVEREST | Climatización, Electricidad e Impresión 3D en Zona Sur y CABA</title>
+
+  <meta name="description" content="Servicios profesionales en climatización, instalaciones eléctricas e impresión 3D en Zona Sur y CABA. Atención técnica responsable, garantía escrita y facturación formal." />
+
+  <meta name="keywords" content="instalación split zona sur, electricista zona sur, impresión 3D zona sur, llaveros personalizados gimnasio, instalación aire acondicionado CABA" />
+
+  <meta name="author" content="EVEREST Servicios Técnicos" />
+
   <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = { 
       theme: { 
         extend: { 
-          colors: { brand: '#0f4c81' } 
+          colors: { 
+            brand: '#0f4c81',
+            green3d: '#00B67A'
+          } 
         } 
       } 
     };
   </script>
+
   <style>
     body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}
   </style>
@@ -26,252 +38,190 @@
 <header class="sticky top-0 z-40 border-b bg-white/80 backdrop-blur">
   <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
     <a href="#" class="flex items-center gap-2">
-      <img src="assets/img/logo.png" alt="Logo EVEREST" class="h-14 w-auto object-contain" />
+      <img src="assets/img/logo.png" alt="EVEREST Servicios Técnicos" class="h-14 w-auto object-contain" />
       <span class="font-extrabold tracking-widest">EVEREST</span>
     </a>
 
     <nav class="hidden gap-6 md:flex text-sm font-medium">
-      <a href="#servicios" class="hover:text-brand">Servicios</a>
-      <a href="#proceso" class="hover:text-brand">Proceso</a>
-      <a href="#trabajos" class="hover:text-brand">Trabajos</a>
+      <a href="#quienes" class="hover:text-brand">Quiénes somos</a>
+      <a href="#servicios-tecnicos" class="hover:text-brand">Servicios Técnicos</a>
+      <a href="#impresiones3d" class="hover:text-green3d">Impresiones 3D</a>
       <a href="#contacto" class="hover:text-brand">Contacto</a>
     </nav>
 
     <a class="rounded-2xl bg-brand px-4 py-2 text-sm font-semibold text-white hover:brightness-110"
        target="_blank"
-       rel="noreferrer"
-       href="https://wa.me/5491125322825?text=Hola,%20quisiera%20coordinar%20una%20evaluación%20técnica.">
-       Solicitar evaluación
+       href="https://wa.me/5491125322825?text=Hola,%20quisiera%20realizar%20una%20consulta.">
+       Contactar
     </a>
   </div>
 </header>
 
-
 <!-- ===== HERO ===== -->
-<section class="relative">
-  <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-16 md:grid-cols-2">
+<section class="py-20">
+  <div class="mx-auto max-w-6xl px-4 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+      Servicios técnicos en <span class="text-brand">climatización y electricidad</span>  
+      + <span class="text-green3d">fabricación mediante impresión 3D</span>
+    </h1>
 
-    <div>
-      <h1 class="text-4xl font-extrabold leading-tight md:text-5xl">
-        Instalación profesional de <span class="text-brand">climatización</span> y <span class="text-brand">electricidad</span> para obras y proyectos residenciales
-      </h1>
-
-      <p class="mt-5 text-gray-600">
-        Especialista en sistemas <strong>split y piso techo</strong>, circuitos dedicados y protecciones reglamentarias.
-        Trabajo técnico con procedimiento completo, garantía escrita y facturación formal.
-        Servicio en <strong>Zona Sur y CABA</strong>.
-      </p>
-
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a class="rounded-2xl bg-brand px-5 py-3 text-sm font-semibold text-white hover:brightness-110"
-           target="_blank"
-           rel="noreferrer"
-           href="https://wa.me/5491125322825?text=Hola,%20quisiera%20coordinar%20una%20evaluación%20técnica.">
-           Coordinar evaluación técnica
-        </a>
-
-        <a href="#servicios"
-           class="rounded-2xl border px-5 py-3 text-sm font-semibold hover:bg-gray-50">
-           Ver servicios
-        </a>
-      </div>
-
-      <div class="mt-4 text-xs text-gray-500">
-        Monotributista · Emitimos factura C · Garantía escrita en cada instalación
-      </div>
-    </div>
-
-    <div>
-      <img src="assets/img/tecnico-instalando-aire.jpg"
-           alt="Instalación profesional en obra"
-           class="aspect-[4/3] w-full rounded-2xl object-cover shadow-xl" />
-    </div>
-
+    <p class="mt-6 text-gray-600 max-w-3xl mx-auto">
+      Trabajo técnico responsable para hogares, arquitectos y comercios.
+      Instalación profesional de aire acondicionado, instalaciones eléctricas reglamentarias
+      y producción de piezas personalizadas en impresión 3D.
+      Atención en Zona Sur y CABA.
+    </p>
   </div>
 </section>
 
+<!-- ===== QUIÉNES SOMOS ===== -->
+<section id="quienes" class="py-16 bg-gray-50">
+  <div class="mx-auto max-w-4xl px-4 text-center">
+    <h2 class="text-3xl font-bold">Quiénes somos</h2>
 
-<!-- ===== SERVICIOS ===== -->
-<section id="servicios" class="bg-gray-50 py-16">
-  <div class="mx-auto max-w-6xl px-4">
-    <h2 class="text-center text-3xl font-bold">Servicios</h2>
-
-    <p class="mx-auto mt-2 max-w-2xl text-center text-gray-600">
-      Instalaciones técnicas prolijas con herramientas profesionales y control de funcionamiento.
+    <p class="mt-6 text-gray-600">
+      EVEREST es un proyecto técnico enfocado en brindar soluciones confiables
+      en climatización, electricidad e impresión 3D.
+      Trabajamos con procedimiento claro, comunicación directa y garantía escrita.
     </p>
 
-    <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+    <p class="mt-4 text-gray-600">
+      Nuestro enfoque combina trabajo técnico en obra con fabricación digital,
+      ofreciendo soluciones modernas para profesionales y comercios.
+    </p>
+  </div>
+</section>
 
-      <div class="rounded-2xl border bg-white p-6 shadow-sm">
-        <div class="text-lg font-semibold">Climatización</div>
+<!-- ===== SERVICIOS TÉCNICOS ===== -->
+<section id="servicios-tecnicos" class="py-16">
+  <div class="mx-auto max-w-6xl px-4">
+    <h2 class="text-3xl font-bold text-center">Servicios Técnicos</h2>
+
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+
+      <div class="rounded-2xl border p-6 shadow-sm">
+        <h3 class="font-semibold text-lg">Instalación de aire acondicionado</h3>
         <p class="mt-3 text-sm text-gray-600">
-          Instalación de sistemas split y piso techo.
+          Instalación profesional de sistemas split y piso techo.
           Vacío reglamentario, prueba de estanqueidad y puesta en marcha controlada.
         </p>
       </div>
 
-      <div class="rounded-2xl border bg-white p-6 shadow-sm">
-        <div class="text-lg font-semibold">Mantenimiento técnico</div>
-        <p class="mt-3 text-sm text-gray-600">
-          Limpieza profunda, control eléctrico, medición de consumo
-          y verificación de rendimiento del equipo.
-        </p>
-      </div>
-
-      <div class="rounded-2xl border bg-white p-6 shadow-sm">
-        <div class="text-lg font-semibold">Instalaciones eléctricas</div>
+      <div class="rounded-2xl border p-6 shadow-sm">
+        <h3 class="font-semibold text-lg">Instalaciones eléctricas técnicas</h3>
         <p class="mt-3 text-sm text-gray-600">
           Circuitos dedicados, térmicas, disyuntor diferencial y puesta a tierra según normativa vigente.
         </p>
       </div>
 
+      <div class="rounded-2xl border p-6 shadow-sm">
+        <h3 class="font-semibold text-lg">Mantenimiento técnico</h3>
+        <p class="mt-3 text-sm text-gray-600">
+          Limpieza profunda, control eléctrico y verificación de rendimiento del equipo.
+        </p>
+      </div>
+
     </div>
   </div>
 </section>
 
-
-<!-- ===== PROCESO ===== -->
-<section id="proceso" class="py-16">
+<!-- ===== IMPRESIONES 3D ===== -->
+<section id="impresiones3d" class="py-16 bg-gray-50">
   <div class="mx-auto max-w-6xl px-4">
-    <h2 class="text-3xl font-bold text-center">Procedimiento de trabajo</h2>
 
-    <div class="mt-10 grid gap-6 md:grid-cols-2">
+    <h2 class="text-3xl font-bold text-center">Impresiones 3D</h2>
 
-      <div class="rounded-2xl border p-6">
-        <h3 class="font-semibold">1. Evaluación técnica</h3>
-        <p class="mt-2 text-sm text-gray-600">
-          Análisis del espacio, ubicación de unidades y requerimientos eléctricos antes de iniciar la instalación.
-        </p>
-      </div>
-
-      <div class="rounded-2xl border p-6">
-        <h3 class="font-semibold">2. Instalación profesional</h3>
-        <p class="mt-2 text-sm text-gray-600">
-          Montaje prolijo, vacío reglamentario, prueba de estanqueidad y verificación de funcionamiento.
-        </p>
-      </div>
-
-      <div class="rounded-2xl border p-6">
-        <h3 class="font-semibold">3. Control eléctrico</h3>
-        <p class="mt-2 text-sm text-gray-600">
-          Instalación de circuito dedicado y protecciones según normativa.
-        </p>
-      </div>
-
-      <div class="rounded-2xl border p-6">
-        <h3 class="font-semibold">4. Entrega y documentación</h3>
-        <p class="mt-2 text-sm text-gray-600">
-          Certificado de garantía y facturación formal entregados al finalizar el trabajo.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ===== POR QUÉ TRABAJAR CON EVEREST ===== -->
-<section class="py-12 bg-gray-50">
-  <div class="mx-auto max-w-4xl px-4 text-center">
-    <h2 class="text-2xl font-semibold">¿Por qué trabajar con EVEREST?</h2>
-
-    <div class="mt-6 grid gap-4 md:grid-cols-2 text-sm text-gray-700">
-      <div>✔ Comunicación directa con el responsable técnico</div>
-      <div>✔ Procedimiento profesional en cada instalación</div>
-      <div>✔ Garantía escrita documentada</div>
-      <div>✔ Facturación formal (Factura C)</div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ===== TRABAJOS ===== -->
-<section id="trabajos" class="py-16">
-  <div class="mx-auto max-w-6xl px-4">
-    <h2 class="text-center text-3xl font-bold">Trabajos realizados</h2>
-
-    <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-
-      <figure class="overflow-hidden rounded-2xl border bg-white shadow-sm">
-        <img src="assets/img/instalacion-3000.jpg" class="h-48 w-full object-cover">
-        <figcaption class="p-4 font-semibold">Instalación split – Dormitorio</figcaption>
-      </figure>
-
-      <figure class="overflow-hidden rounded-2xl border bg-white shadow-sm">
-        <img src="assets/img/mantenimiento-living.jpg" class="h-48 w-full object-cover">
-        <figcaption class="p-4 font-semibold">Mantenimiento técnico – Living</figcaption>
-      </figure>
-
-      <figure class="overflow-hidden rounded-2xl border bg-white shadow-sm">
-        <img src="assets/img/circuito-dedicado.jpg" class="h-48 w-full object-cover">
-        <figcaption class="p-4 font-semibold">Circuito dedicado + protecciones</figcaption>
-      </figure>
-
-    </div>
-
-    <p class="mt-6 text-center text-sm text-gray-600">
-      Más trabajos y avances de obra en nuestro 
-      <a href="https://www.instagram.com/everest_servicios/"
-         target="_blank"
-         rel="noreferrer"
-         class="text-brand font-medium hover:underline">
-         Instagram
-      </a>.
+    <p class="mt-4 text-gray-600 text-center max-w-2xl mx-auto">
+      Producción de llaveros personalizados, piezas técnicas y prototipos.
+      Ideal para gimnasios, comercios y soluciones funcionales a medida.
     </p>
 
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+
+      <div class="rounded-2xl border p-6 shadow-sm bg-white">
+        <h3 class="font-semibold text-lg text-green3d">Llaveros personalizados</h3>
+        <p class="mt-3 text-sm text-gray-600">
+          Producción en lote con diseño personalizado para marcas y gimnasios.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border p-6 shadow-sm bg-white">
+        <h3 class="font-semibold text-lg text-green3d">Piezas técnicas</h3>
+        <p class="mt-3 text-sm text-gray-600">
+          Soportes, adaptadores y soluciones funcionales diseñadas a medida.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border p-6 shadow-sm bg-white">
+        <h3 class="font-semibold text-lg text-green3d">Prototipado</h3>
+        <p class="mt-3 text-sm text-gray-600">
+          Desarrollo de ideas y fabricación de prototipos en PLA y otros materiales.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- GALERÍA PREPARADA PARA FOTOS REALES -->
+    <div class="mt-16">
+      <h3 class="text-2xl font-semibold text-center">Trabajos en impresión 3D</h3>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+
+        <div class="rounded-2xl overflow-hidden border shadow-sm">
+          <img src="assets/img/impresion1.jpg" alt="Llaveros personalizados impresos en 3D" class="w-full h-60 object-cover">
+        </div>
+
+        <div class="rounded-2xl overflow-hidden border shadow-sm">
+          <img src="assets/img/impresion2.jpg" alt="Producción en lote impresión 3D" class="w-full h-60 object-cover">
+        </div>
+
+        <div class="rounded-2xl overflow-hidden border shadow-sm">
+          <img src="assets/img/impresion3.jpg" alt="Piezas técnicas impresión 3D" class="w-full h-60 object-cover">
+        </div>
+
+      </div>
+
+      <p class="text-center text-sm text-gray-500 mt-4">
+        (Reemplazá estas imágenes por fotos reales de tus trabajos)
+      </p>
+    </div>
+
   </div>
 </section>
 
+<!-- ===== CONTACTO ===== -->
+<section id="contacto" class="py-20">
+  <div class="mx-auto max-w-4xl text-center px-4">
+    <h2 class="text-3xl font-bold">Contacto</h2>
 
-<!-- ===== CERTIFICADO ===== -->
-<section id="certificado" class="mt-16 text-center">
-  <h3 class="text-xl font-semibold">Certificado de garantía</h3>
-  <p class="mt-2 text-sm text-gray-600">Documento entregado en cada instalación.</p>
-
-  <img src="Certificados.png"
-       alt="Certificado de garantía EVEREST"
-       class="mx-auto mt-6 max-h-96 rounded-lg shadow">
-</section>
-
-
-<!-- ===== CTA FINAL ===== -->
-<section id="contacto" class="py-16">
-  <div class="mx-auto max-w-6xl rounded-3xl bg-gradient-to-tr from-blue-50 to-white px-6 py-12 shadow-sm text-center">
-    <h3 class="text-2xl font-bold">
-      ¿Necesitás un instalador técnico confiable para tu proyecto?
-    </h3>
-
-    <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
-      Coordinemos una evaluación técnica y definimos la mejor solución para tu obra o proyecto residencial.
+    <p class="mt-4 text-gray-600">
+      Si necesitás instalación técnica o presupuesto de impresión 3D,
+      podés escribirnos directamente por WhatsApp.
     </p>
 
     <div class="mt-6">
       <a class="rounded-2xl bg-brand px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
          target="_blank"
-         rel="noreferrer"
-         href="https://wa.me/5491125322825?text=Hola,%20quisiera%20coordinar%20una%20evaluación%20técnica.">
-         Coordinar evaluación
+         href="https://wa.me/5491125322825?text=Hola,%20quisiera%20realizar%20una%20consulta.">
+         Enviar mensaje
       </a>
     </div>
   </div>
 </section>
 
-
 <!-- ===== FOOTER ===== -->
 <footer class="border-t py-10">
-  <div class="mx-auto max-w-6xl px-4 text-sm text-gray-600">
-    <div class="flex flex-col md:flex-row justify-between gap-6">
-      <div>
-        <strong>EVEREST</strong><br>
-        Climatización y Electricidad<br>
-        Zona Sur y CABA
-      </div>
+  <div class="mx-auto max-w-6xl px-4 text-sm text-gray-600 flex justify-between flex-col md:flex-row gap-6">
+    <div>
+      <strong>EVEREST</strong><br>
+      Servicios Técnicos<br>
+      Zona Sur y CABA
+    </div>
 
-      <div>
-        WhatsApp: 11 2532 2825<br>
-        Email: everestservicios0@gmail.com<br>
-        Monotributista – Factura C
-      </div>
+    <div>
+      WhatsApp: 11 2532 2825<br>
+      Email: everestservicios0@gmail.com<br>
+      Monotributista – Factura C
     </div>
   </div>
 </footer>
