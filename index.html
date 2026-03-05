@@ -275,6 +275,31 @@ class="aspect-[4/3] w-full rounded-2xl object-cover shadow-xl clickable">
     </div>
   </div>
 </footer>
+<div id="modal">
+<span id="cerrar">&times;</span>
+<img id="imagen-grande">
+</div>
 
+<script>
+
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("imagen-grande");
+
+document.querySelectorAll(".clickable").forEach(img => {
+img.onclick = function(){
+modal.style.display = "flex";
+modalImg.src = this.src;
+}
+});
+
+document.getElementById("cerrar").onclick = function(){
+modal.style.display = "none";
+}
+
+modal.onclick = function(){
+modal.style.display = "none";
+}
+
+</script>
 </body>
 </html>
