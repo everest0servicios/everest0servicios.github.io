@@ -300,6 +300,75 @@ class="aspect-[4/3] w-full rounded-2xl object-cover shadow-xl clickable">
 
   </div>
 </section>
+  <!-- ===== RESEÑAS ===== -->
+<section class="py-16 bg-white">
+  <div class="mx-auto max-w-6xl px-4">
+
+    <h2 class="text-3xl font-bold text-center mb-10">
+      Opiniones de clientes
+    </h2>
+
+    <div class="relative overflow-hidden">
+
+      <div id="reviews-slider" class="flex transition-transform duration-500">
+
+        <!-- reseña -->
+        <div class="min-w-[33.33%] p-3">
+          <div class="rounded-2xl border p-6 shadow-sm h-full">
+            <div class="text-yellow-500 text-lg">★★★★★</div>
+            <p class="mt-3 text-sm text-gray-600">
+              Excelente instalación de aire acondicionado. 
+              Trabajo muy prolijo y profesional.
+            </p>
+            <p class="mt-4 font-semibold text-sm">
+              — Cliente verificado en Google
+            </p>
+          </div>
+        </div>
+
+        <!-- reseña -->
+        <div class="min-w-[33.33%] p-3">
+          <div class="rounded-2xl border p-6 shadow-sm h-full">
+            <div class="text-yellow-500 text-lg">★★★★★</div>
+            <p class="mt-3 text-sm text-gray-600">
+              Muy buen servicio técnico. Explicó todo el proceso 
+              y dejó la instalación impecable.
+            </p>
+            <p class="mt-4 font-semibold text-sm">
+              — Cliente verificado en Google
+            </p>
+          </div>
+        </div>
+
+        <!-- reseña -->
+        <div class="min-w-[33.33%] p-3">
+          <div class="rounded-2xl border p-6 shadow-sm h-full">
+            <div class="text-yellow-500 text-lg">★★★★★</div>
+            <p class="mt-3 text-sm text-gray-600">
+              Instalación rápida y muy prolija. 
+              Muy recomendable.
+            </p>
+            <p class="mt-4 font-semibold text-sm">
+              — Cliente verificado en Google
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="text-center mt-8">
+      <a 
+        href="https://maps.app.goo.gl/eGzP61XKziCQTV4QA"
+        target="_blank"
+        class="inline-block bg-brand text-white font-semibold px-6 py-3 rounded-xl hover:brightness-110">
+        Ver todas las reseñas en Google
+      </a>
+    </div>
+
+  </div>
+</section>
 <!-- ===== FOOTER ===== -->
 <footer class="border-t py-10">
   <div class="mx-auto max-w-6xl px-4 text-sm text-gray-600">
@@ -380,6 +449,22 @@ modal.style.display = "none";
 modal.onclick = function(){
 modal.style.display = "none";
 }
+<script>
+
+const slider = document.getElementById("reviews-slider");
+let position = 0;
+
+setInterval(() => {
+
+position += 100;
+
+if(position > 200){
+position = 0;
+}
+
+slider.style.transform = "translateX(-" + position + "%)";
+
+}, 4000);
 
 </script>
 </script>
