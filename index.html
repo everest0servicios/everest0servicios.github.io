@@ -253,22 +253,22 @@
       <p class="eyebrow">Trabajos realizados</p>
       <h2>Instalaciones, limpiezas y servicios reales</h2>
       <div class="gallery">
-        <a class="photo-card" href="assets/trabajo-instalacion.jpeg">
+        <button class="photo-card" type="button" data-lightbox="0">
           <img src="assets/trabajo-instalacion.jpeg" alt="Instalación de aire acondicionado split">
           <h3>Instalación de aire acondicionado split</h3>
-        </a>
-        <a class="photo-card" href="assets/trabajo-mantenimiento.jpg">
+        </button>
+        <button class="photo-card" type="button" data-lightbox="1">
           <img src="assets/trabajo-mantenimiento.jpg" alt="Limpieza y mantenimiento de aire acondicionado piso techo">
           <h3>Mantenimiento técnico de piso techo</h3>
-        </a>
-        <a class="photo-card" href="assets/trabajo-circuitos.png">
+        </button>
+        <button class="photo-card" type="button" data-lightbox="2">
           <img src="assets/trabajo-circuitos.png" alt="Circuitos dedicados y protecciones eléctricas">
           <h3>Circuitos dedicados y protecciones</h3>
-        </a>
-        <a class="photo-card" href="assets/trabajo-portada.png">
+        </button>
+        <button class="photo-card" type="button" data-lightbox="3">
           <img src="assets/trabajo-portada.png" alt="Trabajo realizado por EVEREST en sistema de aire acondicionado">
           <h3>Trabajos reales EVEREST</h3>
-        </a>
+        </button>
       </div>
     </section>
 
@@ -338,6 +338,102 @@
       </a>
     </section>
   </main>
+
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Cerrar galería">×</button>
+    <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Foto anterior">‹</button>
+
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <p id="lightbox-caption"></p>
+    </div>
+
+    <button class="lightbox-arrow lightbox-next" type="button" aria-label="Foto siguiente">›</button>
+  </div>
+
+  <script>
+    const galleryImages = [
+      {
+        src: "assets/trabajo-instalacion.jpeg",
+        alt: "Instalación de aire acondicionado split",
+        caption: "Instalación de aire acondicionado split"
+      },
+      {
+        src: "assets/trabajo-mantenimiento.jpg",
+        alt: "Limpieza y mantenimiento de aire acondicionado piso techo",
+        caption: "Mantenimiento técnico de piso techo"
+      },
+      {
+        src: "assets/trabajo-circuitos.png",
+        alt: "Circuitos dedicados y protecciones eléctricas",
+        caption: "Circuitos dedicados y protecciones"
+      },
+      {
+        src: "assets/trabajo-portada.png",
+        alt: "Trabajo realizado por EVEREST en sistema de aire acondicionado",
+        caption: "Trabajos reales EVEREST"
+      }
+    ];
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const closeBtn = document.querySelector(".lightbox-close");
+    const prevBtn = document.querySelector(".lightbox-prev");
+    const nextBtn = document.querySelector(".lightbox-next");
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightbox();
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("no-scroll");
+    }
+
+    function updateLightbox() {
+      const item = galleryImages[currentIndex];
+      lightboxImg.src = item.src;
+      lightboxImg.alt = item.alt;
+      lightboxCaption.textContent = item.caption;
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      updateLightbox();
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      updateLightbox();
+    }
+
+    document.querySelectorAll("[data-lightbox]").forEach((button) => {
+      button.addEventListener("click", () => openLightbox(Number(button.dataset.lightbox)));
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+    nextBtn.addEventListener("click", showNext);
+    prevBtn.addEventListener("click", showPrev);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (!lightbox.classList.contains("is-open")) return;
+      if (event.key === "Escape") closeLightbox();
+      if (event.key === "ArrowRight") showNext();
+      if (event.key === "ArrowLeft") showPrev();
+    });
+  </script>
 
   <a class="float-wa" href="https://wa.me/541125322825?text=Hola%20Everest%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="WhatsApp">
     <img src="assets/whatsapp.svg" alt="WhatsApp">
