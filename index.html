@@ -22,8 +22,7 @@
 
   <header class="header">
     <a class="brand" href="#">
-      <img src="assets/logo-everest.png" alt="EVEREST Refrigeración y Electricidad" class="logo-img">
-      <span>EVEREST</span>
+      <img src="assets/logo-everest.png" alt="EVEREST Refrigeración y Electricidad" class="logo-img logo-full">
     </a>
 
     <a class="btn btn-outline" href="https://wa.me/541125322825?text=Hola%20Everest%2C%20quiero%20consultar%20por%20un%20aire%20acondicionado." target="_blank" rel="noopener">
@@ -54,13 +53,13 @@
         </a>
       </div>
 
-      <div class="hero-video">
-        <!-- Reemplazar este bloque por iframe de YouTube -->
-        <div class="video-placeholder">
+      <button class="hero-video video-trigger" type="button" aria-label="Reproducir video de presentación">
+        <div class="video-cover-content">
+          <span class="play-button">▶</span>
           <strong>Video de presentación</strong>
-          <span>Acá va tu video de YouTube</span>
+          <small>Conocé cómo trabajamos</small>
         </div>
-      </div>
+      </button>
     </section>
 
     <section class="mini-proof">
@@ -339,6 +338,48 @@
     </section>
   </main>
 
+
+
+  <div class="video-modal" id="videoModal" aria-hidden="true">
+    <button class="video-modal-close" type="button" aria-label="Cerrar video">×</button>
+    <div class="video-modal-inner">
+      <iframe id="youtubeFrame" src="" title="Video de presentación EVEREST" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <a class="video-fallback-link" href="https://www.youtube.com/shorts/HDDJhhHEJL8" target="_blank" rel="noopener">Abrir en YouTube</a>
+    </div>
+  </div>
+
+  <script>
+    const videoModal = document.getElementById("videoModal");
+    const youtubeFrame = document.getElementById("youtubeFrame");
+    const videoTrigger = document.querySelector(".video-trigger");
+    const videoClose = document.querySelector(".video-modal-close");
+    const youtubeEmbedUrl = "https://www.youtube-nocookie.com/embed/HDDJhhHEJL8?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+
+    function openVideoModal() {
+      youtubeFrame.src = youtubeEmbedUrl;
+      videoModal.classList.add("is-open");
+      videoModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
+    }
+
+    function closeVideoModal() {
+      videoModal.classList.remove("is-open");
+      videoModal.setAttribute("aria-hidden", "true");
+      youtubeFrame.src = "";
+      document.body.classList.remove("no-scroll");
+    }
+
+    if (videoTrigger) videoTrigger.addEventListener("click", openVideoModal);
+    if (videoClose) videoClose.addEventListener("click", closeVideoModal);
+
+    videoModal.addEventListener("click", function(event) {
+      if (event.target === videoModal) closeVideoModal();
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape" && videoModal.classList.contains("is-open")) closeVideoModal();
+    });
+  </script>
 
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox-close" type="button" aria-label="Cerrar galería">×</button>
