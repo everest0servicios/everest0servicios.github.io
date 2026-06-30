@@ -343,29 +343,31 @@
   <div class="video-modal" id="videoModal" aria-hidden="true">
     <button class="video-modal-close" type="button" aria-label="Cerrar video">×</button>
     <div class="video-modal-inner">
-      <iframe id="youtubeFrame" src="" title="Video de presentación EVEREST" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <a class="video-fallback-link" href="https://www.youtube.com/shorts/HDDJhhHEJL8" target="_blank" rel="noopener">Abrir en YouTube</a>
+      <video id="everestVideo" controls playsinline preload="metadata">
+        <source src="assets/presentacion-everest.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
     </div>
   </div>
 
   <script>
     const videoModal = document.getElementById("videoModal");
-    const youtubeFrame = document.getElementById("youtubeFrame");
     const videoTrigger = document.querySelector(".video-trigger");
     const videoClose = document.querySelector(".video-modal-close");
-    const youtubeEmbedUrl = "https://www.youtube-nocookie.com/embed/HDDJhhHEJL8?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+    const everestVideo = document.getElementById("everestVideo");
 
     function openVideoModal() {
-      youtubeFrame.src = youtubeEmbedUrl;
       videoModal.classList.add("is-open");
       videoModal.setAttribute("aria-hidden", "false");
       document.body.classList.add("no-scroll");
+      everestVideo.currentTime = 0;
+      everestVideo.play().catch(() => {});
     }
 
     function closeVideoModal() {
       videoModal.classList.remove("is-open");
       videoModal.setAttribute("aria-hidden", "true");
-      youtubeFrame.src = "";
+      everestVideo.pause();
       document.body.classList.remove("no-scroll");
     }
 
